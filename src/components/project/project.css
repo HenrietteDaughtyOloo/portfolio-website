@@ -1,0 +1,61 @@
+.project .items {
+    transition: 0.5s;
+  }
+  .project .img {
+    position: relative;
+    border-radius: 15px;
+
+  }
+  .project img {
+    width: 100%;
+    border-radius: 15px;
+  }
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 15px;
+
+  }
+  .overlay i {
+    background-color: #000;
+    color: #fff;
+    margin: 5px;
+    transition: 0.5s;
+  }
+  .project .details {
+    padding: 30px;
+    text-align: center;
+  }
+  .project .details h2 {
+    font-weight: 500;
+    font-size: 20px;
+    transition: 0.5s;
+  }
+  .project .details p {
+    font-size: 15px;
+    color: grey;
+    margin-top: 10px;
+    transition: 0.5s;
+  }
+  .project .items:hover {
+    background-color: #03787C;;
+    color: #fff;
+    cursor: pointer;
+  }
+  .project .items:hover p {
+    color: #fff;
+  }
+  .project .items:hover .overlay {
+    opacity: 1;
+  }
+  .project .items:hover .overlay i:hover {
+    /* background-color:#1eb2a6; */
+    background-color: #03787C;;
+    color: #fff;
+  }

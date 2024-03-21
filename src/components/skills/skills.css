@@ -1,0 +1,38 @@
+  .prof-items{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 30px;
+      color: #03787C;
+      text-align: center;
+      margin-right: 30px;
+      padding-right: 30px;
+      /* padding: 0 60px; */
+    }
+    .imaged img{
+      width: 60%;
+      border-radius: 15px;
+      height: auto;
+      text-align: center;
+      margin: 15px 0;
+    }
+    
+    @media screen and (max-width:768px) {
+      .prof-items{
+        display: grid;
+        grid-template-columns: (1, 1fr);
+        }
+        .skills-container{
+          align-items: center;
+        }
+        .container{
+          display: flex;
+          flex-direction: column;
+          /* flex-direction: column-reverse; */
+        }
+        .imaged img{
+          width: 80vw;
+        }
+    
+    }
+    
+    
