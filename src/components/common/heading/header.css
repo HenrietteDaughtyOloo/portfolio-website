@@ -12,9 +12,7 @@
 
 /* HEADER */
 header{
-    /* background-color: rgba(255, 255, 255, 0.2); */
     margin: 0 30px;
-    /* background-color: black; */
     background-color: rgba(107, 126, 126, 0.1);
     border-radius: 8px;
     position: relative;
@@ -47,9 +45,32 @@ a{
 li{
     list-style-type: none;
 }
+li:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #03787C;
+
+}
 .toggle{
     display: none;
 }
+
+.clicked {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 3px;
+    text-underline-position: under;
+    transition: width 0.5s ease;
+    text-decoration-color: currentColor;
+    
+}
+.clicked:hover {
+    position: relative;
+    text-decoration: underline;
+}
+
+
+
 @media screen and (max-width: 768px) {
     .start{
         clip-path: none;
