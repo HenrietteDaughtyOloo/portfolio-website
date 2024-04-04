@@ -1,6 +1,8 @@
 import React from 'react'
 import "./hero.css"
 import Title from '../../common/title/Title'
+import { Link } from 'react-router-dom/cjs/react-router-dom.min'
+
 
 const Hero = () => {
   const downloadPDF = () => {
@@ -14,11 +16,11 @@ const Hero = () => {
       <section className='hero'>
         <div className="container flexSB">
             <div className="row">
-                <Title subtitle="Henriette Daughty Oloo"  title="Android || Python Developer "/>
+                <Title subtitle="Henriette Daughty Oloo"  title="Android || Python || Web Developer "/>
 
                 <div className="button">
                 <button className="primary-btn" onClick={downloadPDF}>Download CV <i class="fa-solid fa-download"></i></button>
-                    <button className="primary-btn">Contact Me <i className='fa fa-long-arrow-alt-right'></i></button>
+                <Link to="/contact"> <button className="primary-btn">Contact Me <i className='fa fa-long-arrow-alt-right'></i></button></Link>
 
                 </div>
 
