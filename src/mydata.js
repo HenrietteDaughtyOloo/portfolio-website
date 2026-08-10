@@ -28,15 +28,16 @@ export const projectsData =[
         githubLink:"https://github.com/HenrietteDaughtyOloo/med_link_",
 
       },
-
-      {
-        cover: "https://res.cloudinary.com/drt1jptk7/image/upload/v1710866582/foodie_f8j4ml.jpg",
-        name: "Foodie Website",
-        work: "Website to help hotels advertise their food",
+    {
+        cover: "https://res.cloudinary.com/drt1jptk7/image/upload/v1786358564/MEDS_ts5koj.jpg",
+        name: "MedGuide AI",
+        work: "An agentic AI-powered guide on medication side effects that provides users with accurate and personalized medical information, helping them make informed decisions about their health, without replacing human expertise.",
         figmaLink:"",
-        githubLink:"https://github.com/HenrietteDaughtyOloo/Foodie_Website",
+        githubLink:"https://github.com/HenrietteDaughtyOloo/medguide-ai",
 
-      },
+    },
+
+
 
 
       {
@@ -45,14 +46,6 @@ export const projectsData =[
         work: "Kotlin Based Bills Tracking App",
         figmaLink:"",
         githubLink:"https://github.com/HenrietteDaughtyOloo/The_Billz_Application.git",
-
-      },
-      {
-        cover: "https://res.cloudinary.com/drt1jptk7/image/upload/v1710869347/image-removebg-preview_1_wcai49.png",
-        name: "SemaJe",
-        work: "A chating application",
-        figmaLink:"",
-        githubLink:"https://github.com/HenrietteDaughtyOloo/SemaJe-Chat",
 
       },
       {
@@ -69,6 +62,14 @@ export const projectsData =[
         work: "A backend system for the SeraWazi app ",
         figmaLink:"",
         githubLink:"https://github.com/HenrietteDaughtyOloo/Green-Revive-Backend",
+
+      },
+      {
+        cover: "https://res.cloudinary.com/drt1jptk7/image/upload/v1710866582/foodie_f8j4ml.jpg",
+        name: "Foodie Website",
+        work: "Website to help hotels advertise their food",
+        figmaLink:"",
+        githubLink:"https://github.com/HenrietteDaughtyOloo/Foodie_Website",
 
       },
     
