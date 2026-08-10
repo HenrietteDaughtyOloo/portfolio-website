@@ -21,13 +21,6 @@ export const myAboutData = [
 ]  
 export const projectsData =[
     {
-        cover: "https://res.cloudinary.com/drt1jptk7/image/upload/v1697977868/mrymm4kmmas0hoe0pcid.jpg",
-        name: "SeraWazi",
-        work: "Gamified Constitution Engagement App",
-        figmaLink:"",
-        githubLink:"https://github.com/HenrietteDaughtyOloo/Green-Revive-Mobile/tree/main/SerawaziApplication",
-      },
-      {
         cover: "https://res.cloudinary.com/drt1jptk7/image/upload/v1786349562/stat_med_b5ypcy.jpg",
         name: "MedLink",
         work: "A cross-platform telemedicine application that connects patients with healthcare providers for remote consultations and medical advice.",
@@ -61,6 +54,13 @@ export const projectsData =[
         figmaLink:"",
         githubLink:"https://github.com/HenrietteDaughtyOloo/SemaJe-Chat",
 
+      },
+      {
+        cover: "https://res.cloudinary.com/drt1jptk7/image/upload/v1697977868/mrymm4kmmas0hoe0pcid.jpg",
+        name: "SeraWazi",
+        work: "Gamified Constitution Engagement App",
+        figmaLink:"",
+        githubLink:"https://github.com/HenrietteDaughtyOloo/Green-Revive-Mobile/tree/main/SerawaziApplication",
       },
       {
         // cover: "https://res.cloudinary.com/drt1jptk7/image/upload/v1710865952/362364-original-removebg-preview_rtkmdj.png",
