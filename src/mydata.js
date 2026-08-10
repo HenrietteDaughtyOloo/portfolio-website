@@ -28,11 +28,11 @@ export const projectsData =[
         githubLink:"https://github.com/HenrietteDaughtyOloo/Green-Revive-Mobile/tree/main/SerawaziApplication",
       },
       {
-        cover: "https://res.cloudinary.com/drt1jptk7/image/upload/v1710865964/hotel_zeatnf.jpg",
-        name: "Tulivu",
-        work: "A hotel Management back-end",
+        cover: "https://res.cloudinary.com/drt1jptk7/image/upload/v1786349562/stat_med_b5ypcy.jpg",
+        name: "MedLink",
+        work: "A cross-platform telemedicine application that connects patients with healthcare providers for remote consultations and medical advice.",
         figmaLink:"",
-        githubLink:"https://github.com/HenrietteDaughtyOloo/Tulivu-backend",
+        githubLink:"https://github.com/HenrietteDaughtyOloo/med_link_",
 
       },
 
