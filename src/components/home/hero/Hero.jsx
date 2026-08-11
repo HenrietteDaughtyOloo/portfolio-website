@@ -16,7 +16,7 @@ const Hero = () => {
       <section className='hero'>
         <div className="container flexSB">
             <div className="row">
-                <Title subtitle="Henriette Daughty Oloo"  title="Android || Python || Web Developer "/>
+                <Title subtitle="Henriette Daughty Oloo"  title="Cross Platform || Python || Web Developer "/>
 
                 <div className="button">
                 <button className="primary-btn" onClick={downloadPDF}>Download CV <i class="fa-solid fa-download"></i></button>
