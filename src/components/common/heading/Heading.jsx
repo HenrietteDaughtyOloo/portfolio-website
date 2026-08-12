@@ -1,40 +1,54 @@
 import React, { useState } from 'react'
 import Head from './Head'
-import "./header.css"
-import { Link } from 'react-router-dom/cjs/react-router-dom.min'
+import './header.css'
+
+const navItems = [
+  { label: 'Work', href: '#home' },
+  { label: 'About', href: '#about' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Skills', href: '#skills' },
+  { label: 'Contact', href: '#contact' },
+]
 
 const Heading = () => {
-    const[click, setClick] = useState(false)
+  const [activeNav, setActiveNav] = useState('Work')
 
-    const [clickedLink, setClickedLink] = useState(null);
-
-    const handleLinkClick = (linkName) => {
-        setClickedLink(linkName);
-    };
-
+  const goHome = (event) => {
+    event.preventDefault()
+    setActiveNav('Work')
+    document.getElementById('home')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
 
   return (
     <>
-     <Head/> 
-     <header>
-        <nav className='flexSB'>
-            <ul className={click ? "mobile-nav":'flexSB'} onClick={()=> setClick(false)}>
-                <li><Link to="/" className={clickedLink === "/" ? "clicked" : ""} onClick={() => handleLinkClick("/")}>Home</Link></li>
-                <li><Link to="/about" className={clickedLink === "about" ? "clicked" : ""} onClick={() => handleLinkClick("about")}>About</Link></li>
-                <li><Link to="/skills" className={clickedLink === "skills" ? "clicked" : ""} onClick={() => handleLinkClick("skills")}>Skills</Link></li>
-                <li><Link to="/projects" className={clickedLink === "projects" ? "clicked" : ""} onClick={() => handleLinkClick("projects")}>Projects</Link></li>
-                <li><Link to="/contact" className={clickedLink === "contact" ? "clicked" : ""} onClick={() => handleLinkClick("contact")}>Contact</Link></li>
+      <Head />
 
-            </ul>
-            <div className="start">
-                <div className="button">GET TO KNOW ME</div>
-            </div>
-            <p className="toggle" id='tooogle' onClick={()=> setClick(!click)}>
-                {click ? <i className='fa-fa-times'></i> : <i className='fa fa-bars'></i>}
-            </p>
+      <header className="top-header">
+        <a href="#home" className="brand-mark" aria-label="Brand mark" onClick={goHome}>
+          <span className="brand-ring" />
+          <span className="brand-name">HD.</span>
+        </a>
 
+        <nav className="main-nav" aria-label="Main navigation">
+          {navItems.map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              className={item.label === activeNav ? 'active' : ''}
+              onClick={() => setActiveNav(item.label)}
+            >
+              {item.label}
+            </a>
+          ))}
         </nav>
-     </header>
+
+        <div className="status-pill" aria-label="Status">
+          <span className="status-dot" />
+          <span>Nairobi</span>
+          <span className="status-separator">•</span>
+          <span>Open to remote</span>
+        </div>
+      </header>
     </>
   )
 }

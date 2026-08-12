@@ -1,120 +1,143 @@
-.head{
-    padding: 20px;
-    color: #03787C;
-}
-.logo{
-    font-size: 15px;
-    font-weight: 300;
-}
-.head .icon{
-    margin-left: 10px;
+.head {
+  padding: 8px 0 16px;
+  color: #171515;
 }
 
-/* HEADER */
-header{
-    margin: 0 30px;
-    background-color: rgba(107, 126, 126, 0.1);
-    border-radius: 8px;
-    position: relative;
-}
-header li{
-    margin-right: 40px;
-}
-header ul{
-    padding: 30px 20px;
-}
-header ul li a {
-    color: #03787C;
-    font-weight: 500;
-    transition: 0.5s;
-
-}
-header ul li a:hover{
-    color: #8ae6ea;
-
-}
-.start{
-    background-color: #03787C;
-    padding: 30px 70px;
-    color: #fff;
-    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
-}
-a{
-    text-decoration: none;
-}
-li{
-    list-style-type: none;
-}
-li:hover{
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-    text-decoration-color: #03787C;
-
-}
-.toggle{
-    display: none;
+.logo {
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
-.clicked {
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-    text-underline-offset: 3px;
-    text-underline-position: under;
-    transition: width 0.5s ease;
-    text-decoration-color: currentColor;
-    
-}
-.clicked:hover {
-    position: relative;
-    text-decoration: underline;
+.logo h1 {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
 }
 
+.head .icon {
+  margin-left: 10px;
+}
 
+.top-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+  padding: 14px 18px 16px;
+  margin: 0 -18px 30px;
+  border-bottom: 1px solid rgba(23, 21, 21, 0.15);
+  background: rgba(223, 234, 223, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  justify-self: start;
+}
+
+.brand-ring {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #1a1a1a;
+  position: relative;
+}
+
+.brand-ring::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.brand-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 2vw, 2.5rem);
+  font-weight: 600;
+  font-style: italic;
+  color: #171515;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+}
+
+.main-nav a {
+  color: rgba(23, 21, 21, 0.8);
+  text-decoration: none;
+  position: relative;
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
+
+.main-nav a:hover {
+  color: #171515;
+  background: rgba(26, 79, 57, 0.08);
+}
+
+.main-nav a.active {
+  background: #2d5a47;
+  color: #f5f7f3;
+  font-weight: 700;
+  box-shadow: 0 10px 18px rgba(28, 60, 47, 0.16);
+}
+
+.status-pill {
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  color: rgba(23, 21, 21, 0.75);
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #4ec4a9;
+  display: inline-block;
+  box-shadow: 0 0 0 2px rgba(78, 196, 169, 0.15);
+}
+
+.status-separator {
+  opacity: 0.75;
+}
 
 @media screen and (max-width: 768px) {
-    .start{
-        clip-path: none;
-    }
-    .header{
-        margin: 0;
-        background-color: #03787C;
-        position: relative;
-        /* color: #fff; */
-    }
-    header ul.flexSB{
-        display: none;
-    }
-    header ul li{
-        margin-bottom: 20px;
-        /* color: #fff; */
-    }
-    .toggle{
-        display: block;
-        background-color: none;
-        /* color: #03787C; */
-        /* background-color: #03787C; */
-        color: #03787C;
-        font-size: 30px;
-        position: absolute;
-        right: -10px;
-    /* z-index: -1; */
-        /* top: -30px; */
-        padding: 22px 30px;
+  .top-header {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 18px;
+  }
 
+  .brand-mark,
+  .status-pill {
+    justify-self: center;
+  }
 
-    }
-    /* #tooogle{
-
-    } */
-    .mobile-nav{
-        position: absolute;
-        top: 7vh;
-        left: 0;
-        width: 100%;
-        /* color: #fff; */
-        background-color: #fff;
-    }
-
-    
+  .main-nav {
+    flex-wrap: wrap;
+    gap: 14px 22px;
+  }
 }
 
