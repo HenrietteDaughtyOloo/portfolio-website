@@ -1,15 +1,12 @@
 import React from 'react'
-// import Back from '../common/back/Back'
 import AboutCard from './AboutCard'
-import "./about.css"
+import './about.css'
 
 const About = () => {
   return (
-    <>
-    {/* <Back title = 'About Me'/>  */}
-    <AboutCard />     
-    
-    </>
+    <section id="about" className="section-block about-section">
+      <AboutCard />
+    </section>
   )
 }
 
