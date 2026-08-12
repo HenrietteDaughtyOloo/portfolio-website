@@ -1,0 +1,113 @@
+.experience-section {
+  padding-top: 24px;
+}
+
+.experience-list {
+  display: grid;
+  gap: 0;
+  border-top: 2px solid rgba(23, 21, 21, 0.75);
+}
+
+.experience-entry {
+  display: grid;
+  grid-template-columns: 0.6fr 1.1fr 1.7fr 0.8fr;
+  gap: 22px;
+  align-items: center;
+  padding: 20px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.36);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 16px 28px rgba(28, 50, 41, 0.06);
+  margin-bottom: 16px;
+}
+
+.experience-date-group {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(23, 21, 21, 0.82);
+  line-height: 1.5;
+}
+
+.experience-role-block h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.2rem, 3vw, 4rem);
+  line-height: 0.9;
+  font-weight: 500;
+  margin: 0 0 8px;
+  color: #171515;
+}
+
+.experience-role-block p {
+  font-size: 0.92rem;
+  color: rgba(23, 21, 21, 0.8);
+  font-style: italic;
+  margin: 0;
+}
+
+.experience-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.experience-summary p {
+  margin: 0;
+  font-size: clamp(1rem, 1.2vw, 1.24rem);
+  line-height: 1.5;
+  color: rgba(23, 21, 21, 0.8);
+}
+
+.experience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.experience-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1.5px solid rgba(23, 21, 21, 0.75);
+  background: rgba(255, 255, 255, 0.22);
+  padding: 6px 12px;
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(23, 21, 21, 0.8);
+}
+
+.experience-badge-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.experience-badge {
+  font-size: 0.64rem;
+  color: rgba(23, 21, 21, 0.75);
+  text-align: right;
+}
+
+.experience-badge.accent {
+  color: #d97c59;
+  font-style: italic;
+}
+
+@media screen and (max-width: 980px) {
+  .experience-entry {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 22px 0;
+  }
+
+  .experience-badge-wrap {
+    align-items: flex-start;
+  }
+}
