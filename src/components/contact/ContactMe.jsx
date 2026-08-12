@@ -1,22 +1,37 @@
 import React from 'react'
-import "./contactme.css"
+import './contactme.css'
 import ContactForm from './ContactForm'
 
 const ContactMe = () => {
   return (
-    <div>
-    <h1>Contact Me</h1>
-    <div className='container flexSB'>
-        <div className='container'>
-    <img className='formImg' src="https://res.cloudinary.com/drt1jptk7/image/upload/v1711027977/undraw_personal_email_re_4lx7_roh6lp.svg" alt="" />
-    </div>
-    <div className='contact-page-container'>
-      <p className='intro-text'>If you have any questions or inquiries,  feel
-      to contact me using the form below:</p>
-      <ContactForm/>
-    </div>
-    </div>
-    </div>
+    <section id="contact" className="section-block contact-section">
+      <div className="section-heading contact-heading">
+        <p>Contact</p>
+        <h2>Let&apos;s build something useful.</h2>
+      </div>
+
+      <div className="contact-layout">
+        <div className="contact-card">
+          <p className="contact-kicker">Available for product, mobile, and web work</p>
+          <h3>Tell me what you&apos;re building.</h3>
+          <p className="contact-copy">
+            I&apos;m open to product engineering, digital experiences, and meaningful software projects.
+            If you have an idea, a team, or a role that needs someone who can ship cleanly from concept to delivery,
+            I&apos;d love to hear from you.
+          </p>
+
+          <div className="contact-links">
+            <a href="mailto:henriettedooloo@gmail.com">henriettedooloo@gmail.com</a>
+            <a href="https://www.linkedin.com/in/henriette-oloo/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://github.com/HenrietteDaughtyOloo" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </div>
+
+        <div className="contact-panel">
+          <ContactForm />
+        </div>
+      </div>
+    </section>
   )
 }
 

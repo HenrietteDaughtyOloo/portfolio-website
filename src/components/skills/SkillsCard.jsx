@@ -1,43 +1,33 @@
-import "./skills.css";
-import React from 'react';
-import ProgressList from "./ProgressList";
-const SkillsCard = ({projectsData}) => {
-    return(
-            <section className="container flexSB">
-<div className="imaged">
-    <h2>Professional Skills</h2>
-        <img src="https://res.cloudinary.com/drt1jptk7/image/upload/v1711020041/microsoftHen_t0nhlv.jpg" alt="" />
-       
-{/* <div className="flexSB professional">        
-<ul className="profesh">
-            <li>Responsible</li>
-            <li>Accountability</li>
-        </ul>
-        <ul>
-            <li>Problem Solving</li>
-            <li>Responsible</li>
-            <br />
+import './skills.css'
+import React from 'react'
+import { skillGroups } from '../../mydata'
 
-        </ul>
-</div> */}
+const SkillsCard = () => {
+  return (
+    <section className="skills-zoo">
+      <div className="section-header skills-header">
+        <h2>What I work with</h2>
+        <div className="header-note">Product • code • problem-solving</div>
+      </div>
 
-</div>
+      <div className="skill-grid">
+        {skillGroups.map((group) => (
+          <div key={group.title} className={`skill-card ${group.tone}`}>
+            <div className="skill-title-row">
+              <span className="skill-bullet" aria-hidden="true">✦</span>
+              <h3>{group.title}</h3>
+            </div>
+            <p className="skill-subtitle">{group.subtitle}</p>
+            <div className="skill-pills">
+              {group.items.map((item) => (
+                <span key={item} className="skill-pill">{item}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}
 
-                   
-
-                       <div className="skills-container">
-                            <h2>Technical Skills</h2>
-                            <div>
-                            <ProgressList/>
-
-                        </div>
-                        <hr />
-                        </div> 
-<hr />
-
-            </section>
-
-    )
-  }
-  
 export default SkillsCard

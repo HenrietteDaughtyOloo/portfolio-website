@@ -1,15 +1,12 @@
 import React from 'react'
-import "./skills.css"
+import './skills.css'
 import SkillsCard from './SkillsCard'
 
 const Skills = () => {
   return (
-    <>
-    <br /><br />
-    {/* <h2>Skills</h2> */}
-    <SkillsCard/>
-      
-    </>
+    <section id="skills" className="section-block skills-section">
+      <SkillsCard />
+    </section>
   )
 }
 

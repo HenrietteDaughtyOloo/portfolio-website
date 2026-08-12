@@ -1,105 +1,84 @@
-import React from 'react'
-import { useState, useRef } from 'react';
-import emailjs, { send } from '@emailjs/browser';
-import 'react-toastify/dist/ReactToastify.css';
+import React, { useState } from 'react'
 import { toast } from 'react-toastify'
 
-
-
-
 const ContactForm = () => {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
-    const serviceKey = process.env.REACT_APP_SERVICE_KEY;
-    const publicKey = process.env.REACT_APP_PUBLIC_KEY;
-    const templateId = process.env.REACT_APP_TEMPLATE_KEY;
-    
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  })
 
-  
-    // const handleSubmit = (e) => {
-    //   e.preventDefault();
-    //   console.log("Form submitted:", { name, email, message });
-    // };
-
-    
-    const form = useRef();
-
-    const sendEmail = (e) => {
-      e.preventDefault();
-            // console.log("Form submitted:", { name, email, message });
-
-
-  
-      emailjs
-        .sendForm(
-          serviceKey,templateId,form.current, {
-          publicKey: publicKey,
-        })
-        .then(
-          (result) => {
-            
-            console.log(result.text)
-            
-            console.log('Message Sent!');
-            setName('');
-            setEmail('');
-            setMessage('');
-            toast.success('Sent!!');
-      
-            
-          },
-          (error) => {
-            console.log('FAILED...', error.text);
-
-          },
-        );
-    };
-
- 
-  
-    return (
-      <form ref={form} onSubmit={sendEmail}>
-        <div>
-          <label htmlFor="name">Name:</label>
-          <br />
-          <input
-            type="text"
-            id="name"
-            value={name}
-            name='from_name'
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <br />
-          <input
-            type="email"
-            id="email"
-            value={email}
-            name='user_email'
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="message">Message:</label>
-          <br />
-          <textarea
-            id="message"
-            value={message}
-            name='message'
-            onChange={(e) => setMessage(e.target.value)}
-            required
-          >
-
-          </textarea>
-        </div>
-        <button type="submit" value={send}>Submit</button>
-      </form>
-    );
+  const handleChange = (event) => {
+    const { name, value } = event.target
+    setFormData((prev) => ({ ...prev, [name]: value }))
   }
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+
+    const subject = encodeURIComponent(`Portfolio enquiry from ${formData.name}`)
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
+    )
+
+    const mailtoLink = `mailto:henriettedooloo@gmail.com?subject=${subject}&body=${body}`
+
+    try {
+      const newWindow = window.open(mailtoLink, '_self')
+      if (newWindow === null) {
+        throw new Error('Blocked')
+      }
+      toast.success('Your email app is opening with your message ready to send.')
+      setFormData({ name: '', email: '', message: '' })
+    } catch (error) {
+      toast.error('Something went wrong. Please email henriettedooloo@gmail.com directly.')
+    }
+  }
+
+  return (
+    <form className="contact-form" onSubmit={handleSubmit}>
+      <div className="field-row">
+        <label htmlFor="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          placeholder="Your name"
+          required
+        />
+      </div>
+
+      <div className="field-row">
+        <label htmlFor="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          placeholder="you@example.com"
+          required
+        />
+      </div>
+
+      <div className="field-row">
+        <label htmlFor="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          placeholder="Tell me a bit about your idea, project, or role."
+          rows="5"
+          required
+        />
+      </div>
+
+      <button type="submit" className="contact-submit">Send email</button>
+    </form>
+  )
+}
 
 export default ContactForm
