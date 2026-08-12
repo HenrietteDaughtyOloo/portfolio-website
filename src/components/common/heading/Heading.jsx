@@ -25,8 +25,17 @@ const Heading = () => {
 
       <header className="top-header">
         <a href="#home" className="brand-mark" aria-label="Brand mark" onClick={goHome}>
+          {/* 
           <span className="brand-ring" />
+           */}
+          {/* 
           <span className="brand-name">HD.</span>
+           */}
+            <img
+            src="https://res.cloudinary.com/drt1jptk7/image/upload/v1786516775/screen_cqodjn.png"
+            alt="Henriette Daughty Oloo logo"
+            className="brand-logo"
+            />
         </a>
 
         <nav className="main-nav" aria-label="Main navigation">

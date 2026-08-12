@@ -77,7 +77,13 @@
   letter-spacing: 0.12em;
   font-size: 0.7rem;
 }
-
+.brand-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  display: block;
+  border-radius: 50%;
+}
 .main-nav a {
   color: rgba(23, 21, 21, 0.8);
   text-decoration: none;
